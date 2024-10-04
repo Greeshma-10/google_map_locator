@@ -9,6 +9,34 @@ body {
     width: 100%;
     height: 100%;
 }
+/* Set the map to cover the entire background */
+#map {
+    position: absolute;   /* Position it absolutely to the body */
+    top: 0;               /* Align it to the top */
+    left: 0;              /* Align it to the left */
+    width: 100%;          /* Full width */
+    height: 100vh;        /* Full viewport height */
+    z-index: 0;           /* Set it behind other elements */
+  }
+  
+  /* Ensure the search and store-list containers are above the map */
+  .search-container, .stores-list-container {
+    position: relative;   /* Keep these elements in normal flow */
+    z-index: 10;          /* Ensure these are above the map */
+    background-color: rgba(255, 255, 255, 0.9); /* Optional: Add some background to make them readable */
+    padding: 10px;
+  }
+  
+  /* Style the title to appear over the map */
+  .title {
+    position: relative;
+    z-index: 10;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Optional background for readability */
+  }
+  
 
 .title {
     position: absolute;

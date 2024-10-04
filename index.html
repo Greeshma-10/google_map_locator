@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Google Maps Project</title>
+    <title>Store Locator</title>
+    
+    <!-- Include Leaflet CSS and JS for OSM -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
     <script src="js/store-data.js"></script>
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="style/style.css" />
@@ -13,6 +18,14 @@
       href="img/google-maps-icon.png"
       type="image/x-icon"
     />
+
+    <style>
+      /* Ensure the map container has a height */
+      #map {
+        height: 500px;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <div class="title">Store Locator</div>
@@ -24,13 +37,14 @@
     </div>
     <div class="stores-list-container">
       <div class="stores-list">
+        <!-- Example of one store, will be replaced by JavaScript -->
         <div class="store-container">
           <div class="store-info-container">
             <div class="store-address">
-              <span>8480 Beverly Blvd</span>
-              <span>Los Angeles, CA 90048</span>
+              <span>MG road</span>
+              <span>Bengaluru, Karnataka</span>
             </div>
-            <div class="store-phone-number">+92 308 1334342</div>
+            <div class="store-phone-number">+91 908334342</div>
           </div>
           <div class="store-number-container">
             <div class="store-number">
@@ -41,9 +55,8 @@
       </div>
     </div>
 
+    <!-- Map container -->
     <div id="map"></div>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZIZeWYLcE4x4kOSO7-TJuKXuhL6CR7KI&callback=initMap">
-        </script>
+    
   </body>
 </html>
